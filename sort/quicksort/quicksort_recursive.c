@@ -21,8 +21,10 @@ void print_result(int a[], int n)           /* ソート結果を出力する */
     int i;
 
     for (i = 0; i <= n; i++) {
-      printf("%d\n",a[i]);
+      printf("%11d", a[i]);          /* 右揃え・固定幅で出力 */
+      if ((i + 1) % 10 == 0) printf("\n");  /* 8個ごとに改行 */
     }
+    if ((n + 1) % 8 != 0) printf("\n");
 }
 
 void swap(int *a, int *b)
@@ -71,7 +73,7 @@ void qsort(int a[], int p, int q) /* a[p..q]をソートする*/
   int p, q;
   clock_t c1, c2;
 
-  p = 1;
+  p = 0;
   q= amax;
   
   gen_data(a, q);
