@@ -1,0 +1,19 @@
+# C: ビルド成果物 (実行ファイルは *.out で出力する)
+*.out
+*.o
+*.exe
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# エディタ / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Claude Code の個人設定
+.claude/settings.local.json
